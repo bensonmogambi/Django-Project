@@ -1,19 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
+{% load static %}
 
-    <link rel="stylesheet" href="../../static/style/style.css">
+{% block content %}
+
+<!-- create a heading of the page -->
+<h1>Welcome to Our Food Network</h1>
+
+
+<!--create a bootstrap carousel with three images-->
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/spring.jpg' %}" class="d-block w-100 img-fluid" alt="Salmon with veggies and salad">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Fresh Salmon Salad</h5>
+        <p>Delicious salmon with fresh vegetables and herbs.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/salad.jpg' %}" class="d-block w-100 img-fluid" alt="Fruit salad with berries">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Fruit and Berry Salad</h5>
+        <p>Healthy salad with vibrant fruits and berries.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/img1.jpg' %}" class="d-block w-100 img-fluid" alt="Ravioli pastry with herbs">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Homemade Ravioli</h5>
+        <p>Delightful homemade ravioli with fresh ingredients.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
 
 
-</head>
-<body>
-<h2>This is the Home Page</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci animi atque beatae corporis culpa cumque dolorem doloremque, dolorum eaque eius fuga illum in labore laudantium mollitia odit omnis perferendis, provident quae qui quibusdam quis quos recusandae soluta tempore temporibus, totam velit veniam voluptate? Accusantium adipisci aspernatur beatae dignissimos doloribus est eum id illum inventore minima minus molestias, nisi non optio quas vitae voluptas! Corporis dolor optio praesentium tempore!</p>
 
-</body>
-</html>
+
+<!--create a paragraph using lorem with 60, words-->
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi dolor exercitationem illum impedit, molestias optio tempore unde! A asperiores blanditiis dolor ducimus id minima nesciunt obcaecati possimus, quia recusandae repellat similique! Adipisci facilis porro repellendus totam, ullam voluptatibus! Animi at consectetur consequatur cum debitis deserunt dolor, dolorem doloribus fugiat, impedit iure mollitia natus neque quidem quo ratione reprehenderit, vitae.</p>
+
+<!--create a bootstrap jumbotron-->
+
+<!-- Jumbotron -->
+<div class="jumbotron bg-light p-5 my-4">
+    <h1 class="display-4">Our Passion for Quality</h1>
+    <p class="lead">We are dedicated to providing fresh, quality foods to nourish you and your family.</p>
+</div>
+
+<!--create a paragraph using lorem with 60 words-->
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, aspernatur cum, delectus eaque enim est expedita nisi numquam qui ratione, totam voluptas? Accusamus atque fugiat reiciendis tempora voluptates. Dicta facere neque officiis reiciendis tempora vitae voluptate? Ad asperiores facilis iure, nesciunt odit qui repellendus sit soluta veritatis! Ea est expedita inventore labore, nam numquam odio pariatur placeat, quaerat ullam vero.</p>
+
+
+
+
+{% endblock %}

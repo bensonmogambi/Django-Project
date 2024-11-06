@@ -24,8 +24,29 @@ now when connecting the html files to the style, creat link tags in the html fil
 the dots help us move out of the directory then go to the static directory and locate the style.css
 
 
+nov 06
+adding bootstrap
+by pasting it to the style file then add the following links to the index file to check for css and js
+<link rel="stylesheet" href="../../static/style/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../static/style/bootstrap/js/bootstrap.min.js">
+
+add a navbar in the index, by going to boostrap and selecting code for any nav bar
 
 
+ginger templating
+helps not repeat eg doing a navbar in each page eg home etc, we can reuse it repeatatively 
+using {% load static %}
+if you do this to one file then delete all content in the other pages so we have one html file and then do all other thing there
+now lets creat a html base file 
+now we will have content only in the base file all the other files/pages should be empty
+
+in the base fle we will put all things that are repeated each time and do not change from page to page .
+the unique content of each file are kept here 
+{% block content %}
+
+all the unique things should be implemented here
+
+{% endblock %}
 
 
 
