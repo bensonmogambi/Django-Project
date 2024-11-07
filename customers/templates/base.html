@@ -15,7 +15,9 @@
 
 
 </head>
-<body>
+
+<!--I want to make my footer stay in one position in pages that have nothing -->
+<body class="d-flex flex-column min-vh-100">
 
 <header>
 
@@ -28,16 +30,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'index' %}"><strong>Home</strong></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="{% url 'about' %}"><strong>About</strong></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Gallery</a>
+          <a class="nav-link" href="#"><strong>Gallery</strong></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="{% url 'contact' %}"><strong>Contact</strong></a>
         </li>
       </ul>
     </div>
@@ -51,7 +53,7 @@
 
 {% endblock %}
 
-<footer class="bg-dark text-white text-center py-4">
+<footer class="bg-dark text-white text-center py-4 mt-auto">
     <p>© 2024 Tomato Food Network | All Rights Reserved</p>
     <ul class="list-unstyled">
         <li><a href="#" class="text-white">Privacy Policy</a></li>

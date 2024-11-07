@@ -1,9 +1,81 @@
 {% extends 'base.html' %}
 
-
-
-
 {% block content %}
-<h5>This is the content of the about us page</h5>
+
+<!-- Page Title -->
+<h1 class="text-center mt-4">About Us</h1>
+<p class="text-center mb-5">Learn more about our mission, values, and what drives us to deliver quality food experiences.</p>
+
+<!-- About Section -->
+<div class="container">
+  <div class="row align-items-center">
+    <!-- Image Section -->
+    <div class="col-md-6 mb-4">
+      <img src="https://cdn.pixabay.com/photo/2016/03/05/20/07/abstract-1238657_1280.jpg" class="img-fluid rounded" alt="Our team working in a vibrant kitchen">
+    </div>
+    <!-- Text Section -->
+    <div class="col-md-6">
+      <h2>Our Story</h2>
+      <p>Founded with a passion for quality and fresh ingredients, our Food Network is committed to bringing you the best culinary experiences. We believe in the power of good food to bring people together and make every meal memorable.</p>
+      <p>Our team is dedicated to sourcing the freshest ingredients and crafting recipes that are both nutritious and delicious. We strive to inspire others with our love for food and our dedication to sustainable and ethical practices.</p>
+    </div>
+  </div>
+
+  <!-- Values Section -->
+  <div class="row mt-5">
+    <div class="col">
+      <h2 class="text-center mb-4">Our Values</h2>
+      <div class="row">
+        <!-- Value 1 -->
+        <div class="col-md-4 text-center mb-4">
+          <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+          <h4>Fresh Ingredients</h4>
+          <p>We prioritize freshness in every recipe, sourcing locally and organically whenever possible to ensure quality.</p>
+        </div>
+        <!-- Value 2 -->
+        <div class="col-md-4 text-center mb-4">
+          <i class="fas fa-heart fa-3x text-danger mb-3"></i>
+          <h4>Customer Love</h4>
+          <p>Your satisfaction is our top priority, and we work hard to bring you meals that make you feel good inside and out.</p>
+        </div>
+        <!-- Value 3 -->
+        <div class="col-md-4 text-center mb-4">
+          <i class="fas fa-globe fa-3x text-primary mb-3"></i>
+          <h4>Sustainability</h4>
+          <p>Our commitment to the environment means we take care to minimize waste and support sustainable farming practices.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Section -->
+  <div class="row mt-5">
+    <div class="col">
+      <h2 class="text-center mb-4">Meet Our Team</h2>
+      <p class="text-center">Our dedicated team of chefs, nutritionists, and food enthusiasts work tirelessly to bring you the best in culinary excellence.</p>
+      <div class="row text-center">
+        <!-- Team Member 1 -->
+        <div class="col-md-4 mb-4">
+          <img src="https://cdn.pixabay.com/photo/2015/03/04/22/35/chef-659359_1280.jpg" class="rounded-circle img-fluid mb-3" alt="Head Chef">
+          <h5>Jane Doe</h5>
+          <p>Head Chef</p>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="col-md-4 mb-4">
+          <img src="https://cdn.pixabay.com/photo/2017/02/23/13/05/cooking-2092412_1280.jpg" class="rounded-circle img-fluid mb-3" alt="Nutritionist">
+          <h5>John Smith</h5>
+          <p>Nutritionist</p>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="col-md-4 mb-4">
+          <img src="https://cdn.pixabay.com/photo/2016/08/01/15/16/man-1565840_1280.jpg" class="rounded-circle img-fluid mb-3" alt="Food Enthusiast">
+          <h5>Emily Brown</h5>
+          <p>Food Enthusiast & Blogger</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 {% endblock %}

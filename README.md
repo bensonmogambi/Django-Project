@@ -51,8 +51,9 @@ all the unique things should be implemented here
 
 
 
-
-
+#nov 07
+making our nav bar links work
+use {% url 'home' %} under the href
 
 
 
