@@ -58,4 +58,13 @@ use {% url 'home' %} under the href
 
 
 
+NOVEMBER 08
+#MODELS-       done under the models.py file
+Allows us to creat forms for the templates 
+HELPS CaPTURE DATA AND STORE IT IN THE DB
+eg name,gender , email, phone number etc
+
+now create a file forms after doing the class function in the models.py
+then cretae a button that collect all the data 
+
 

@@ -4,6 +4,26 @@
 
 
 {% block content %}
-<h5>This is the content of the contact page</h5>
+
+<h3>Register Form</h3>
+
+<div class="row">
+    <div class="col-md-3" ></div>
+    <div class="col-md-6" >
+
+        <form action="">
+              {{ form.as_p  }}  <!--calling the rendered form here -->
+              <button type="submit" class="btn btn-primary w-100">SUBMIT</button>
+        </form>
+
+    </div>
+    <div class="col-md-3" ></div>
+
+
+</div>
+
+
+
+
 
 {% endblock %}
