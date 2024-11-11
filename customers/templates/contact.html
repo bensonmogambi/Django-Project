@@ -5,15 +5,15 @@
 
 {% block content %}
 
-<h3>Register Form</h3>
-
 <div class="row">
     <div class="col-md-3" ></div>
     <div class="col-md-6" >
 
-        <form action="">
-              {{ form.as_p  }}  <!--calling the rendered form here -->
-              <button type="submit" class="btn btn-primary w-100">SUBMIT</button>
+        <form action="" method="POST">
+            {% csrf_token  %}
+            <h3>Register Form</h3>
+            {{ form.as_p  }}  <!--calling the rendered form here -->
+            <button type="submit" class="btn btn-primary w-100">SUBMIT</button>
         </form>
 
     </div>

@@ -67,4 +67,27 @@ eg name,gender , email, phone number etc
 now create a file forms after doing the class function in the models.py
 then cretae a button that collect all the data 
 
+NOVEMBER 11
+Converting models into database tables and connecting backend to frontend
+we register the models in the admin.py file
+
+# Register your models here.
+
+admin.site.register(Customer)
+
+after this, create a credential to access the db in the terminal 
+python manage.py createsuperuser
+then do the migrations 
+python manage.py makemigrations
+python manage.py migrate
+then create the credentials using - python manage.py createsuperuser
+p is 9330
+
+to create a logic that collects data from the frontend and storing the data in the db, create it in the views file
+
+
+
+
+
+
 
