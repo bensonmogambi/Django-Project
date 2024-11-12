@@ -13,9 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.contrib import admin
+from django.template.context_processors import static
 from django.urls import path
 from customers import views
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -25,4 +28,4 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
 
 
-]
+]+static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)   #ADDING IMAGES you will have to go and add the mediaroot in settings .py

@@ -6,6 +6,8 @@ from django.core.validators import RegexValidator
 # Create your models here.
 
 class Customer(models.Model):
+    image= models.ImageField(upload_to='customers_images/', blank=True)
+
     name = models.CharField(max_length=22)
 
     admissions = models.CharField(max_length=22, validators=[

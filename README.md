@@ -87,6 +87,10 @@ to create a logic that collects data from the frontend and storing the data in t
 
 
 
+#12 NOV
+Adding images to the models
+the images will be in the media dir, but the db will store the url
+
 
 
 

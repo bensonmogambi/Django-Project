@@ -12,8 +12,9 @@ def about(request):
 
 def contact(request):
     #connecting the form here and also connecting it to the db
+    #we can also capture image by adding request.files
     if request.method == 'POST':
-        form =CustomerForm(request.POST)
+        form =CustomerForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect(contact)
