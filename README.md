@@ -92,6 +92,11 @@ Adding images to the models
 the images will be in the media dir, but the db will store the url
 
 
+#november 13
+#fetching data from the db
+
+
+
 
 
 

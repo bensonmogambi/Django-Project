@@ -28,4 +28,4 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
 
 
-]+static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)   #ADDING IMAGES you will have to go and add the mediaroot in settings .py
+]

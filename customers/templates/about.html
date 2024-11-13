@@ -1,6 +1,56 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
+
+<!--creating the table THAT FETCHES DATA FROM THE DATABASE-->
+<h3>Customer List</h3>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>PHOTO</th>
+    <th>NAME</th>
+    <th>ADMISSIONS</th>
+    <th>EMAIL</th>
+    <th>GENDER</th>
+    <th>AGE</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  {% for customer in data  %} <!-- looping around the db model populate it in a row,,,, AND FETCHES IT USING GINJER-->
+
+  <tr>
+    <td> <!-- if we dont get the image it attaches the placeholder -->
+      {% if customer.image %}
+      <img src="{{ customer.image.url }}" alt="{{ customer.name }}" style="width: 80px; height: 80px; object-fit: cover">
+      {% else %}
+      <img src="{% static 'images/placeholder.png' %}" alt="no image" style="width: 80px; height: 80px; object-fit: cover">
+      {% endif  %}
+    </td>
+    <td>{{ customer.name }}</td>
+    <td>{{ customer.admissions }}</td>
+    <td>{{ customer.email }}</td>
+    <td>{{ customer.gender }}</td>
+    <td>{{ customer.age }}</td>
+  </tr>
+
+  {% endfor  %}
+
+  </tbody>
+
+
+
+</table>
+
+
+
+
+
+
+
+
 
 <!-- Page Title -->
 <h1 class="text-center mt-4">About Us</h1>
