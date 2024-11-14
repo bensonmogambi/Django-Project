@@ -3,6 +3,13 @@
 
 {% block content %}
 
+<!--THIS DISPLAYS THE MASSAGE FOR UPDATING THINGS IN THE DATA BASE-->
+{% if messages  %}
+        {% for message in messages  %}
+            <div class="alert {{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+{% endif %}
+
 <!--creating the table THAT FETCHES DATA FROM THE DATABASE-->
 <h3>Customer List</h3>
 
@@ -15,6 +22,11 @@
     <th>EMAIL</th>
     <th>GENDER</th>
     <th>AGE</th>
+
+    <!--Updating and deleting a record from the db-->
+    <th></th>
+
+
   </tr>
   </thead>
 
@@ -34,13 +46,16 @@
     <td>{{ customer.email }}</td>
     <td>{{ customer.gender }}</td>
     <td>{{ customer.age }}</td>
+
+    <!--Updating and deleting a record from the db-->
+
+    <td><a href="{% url 'update' customer.id %}" class="btn btn-success" type="button">UPDATE</a></td>
+
   </tr>
 
   {% endfor  %}
 
   </tbody>
-
-
 
 </table>
 

@@ -95,6 +95,12 @@ the images will be in the media dir, but the db will store the url
 #november 13
 #fetching data from the db
 
+#nov 14
+Updating and deleting a record from the db
+thats basically a button we create it adjusent to each record
+
+
+
 
 
 

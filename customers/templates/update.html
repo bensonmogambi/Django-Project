@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!--Updating and deleting a record from the db-->
+
+<h3>UPDATE CUSTOMER</h3>
+
+<form action="" method="POST" ENCTYPE="multipart/form-data">
+    {% csrf_token %}   <!--THIS TOKEN IS REQUIRED TO SUBMIT A FORM IN DJANGO-->
+
+        {{ form.as_p }} <!--CALLING THE FORM AT THIS POINT-->
+
+    <button TYPE="submit" class="btn btn-success">UPDATE</button>
+    <a href="" class="btn btn-secondary">Cancel</a>
+
+</form>
+
+
+{% endblock %}

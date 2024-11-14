@@ -27,5 +27,8 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
 
+    #updating things in the database
+    path('update/<int:id>', views.update, name='update'),
+
 
 ]
