@@ -101,8 +101,15 @@ thats basically a button we create it adjusent to each record
 
 
 
+#NOV 15
+#DELETING A RECORD FROM THE DB
 
 
+
+
+
+pip install pymysql - bridge that install the client 
+then open the init on the project level
 
 
 

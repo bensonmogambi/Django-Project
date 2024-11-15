@@ -29,6 +29,7 @@ urlpatterns = [
 
     #updating things in the database
     path('update/<int:id>', views.update, name='update'),
+    path('delete/<int:id>', views.delete, name='delete'),
 
 
 ]

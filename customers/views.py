@@ -66,6 +66,18 @@ def update(request, id):
     return render(request, 'update.html', {"form":form, "customer":customer})
 
 
+def delete(request, id):
+    customer = get_object_or_404(Customer, id=id)
+
+    try:
+        customer.delete()
+        messages.success(request, f'Customer deleted successfully!')
+
+    except Exception as e:
+        messages.error(request, 'Customer not Deleted!')
+
+    return redirect('about')
+
 
 
 

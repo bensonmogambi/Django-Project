@@ -25,6 +25,7 @@
 
     <!--Updating and deleting a record from the db-->
     <th></th>
+    <th></th>
 
 
   </tr>
@@ -50,6 +51,8 @@
     <!--Updating and deleting a record from the db-->
 
     <td><a href="{% url 'update' customer.id %}" class="btn btn-success" type="button">UPDATE</a></td>
+    <td><a href="{% url 'delete' customer.id %}" class="btn btn-danger" type="button"
+           onclick="return confirm('Are you sure you want to delete customer')">DELETE</a></td>
 
   </tr>
 
