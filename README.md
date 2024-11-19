@@ -112,4 +112,11 @@ pip install pymysql - bridge that install the client
 then open the init on the project level
 
 
+NOV 19
+API
+pip install djangorestframework
+leting the api aloow a thridpart software access customer data
+registerit in the settings file ... 'rest_framework',
 
+then create a new file under the app , create a new python file
+the create a url under the app

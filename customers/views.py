@@ -1,10 +1,15 @@
 from gc import get_objects
 
+from django.core.serializers import serialize
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from pyexpat.errors import messages
+from rest_framework import status
+from rest_framework.decorators import api_view
 
+from customers.Serializers import CustomerSerializers, OrderSerializers
 from customers.forms import CustomerForm
-from customers.models import Customer
+from customers.models import Customer, Order
 
 import os
 from django.contrib import messages
@@ -78,6 +83,38 @@ def delete(request, id):
 
     return redirect('about')
 
+
+
+#API NOV 19
+
+@api_view(['GET', 'POST'])
+
+def customersapi(request):
+    if request.method == 'GET':
+        customers = Customer.objects.all()
+        serializer= CustomerSerializers(customers, many=True)
+        return JsonResponse(serializer.data, safe= False)
+
+    elif request.method == 'POST':
+        serializer = CustomerSerializers(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, safe= False,status=status.HTTP_201_CREATED) #new record created
+        return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+def orderapi(request):
+    if request.method == 'GET':
+        orders = Order.objects.all()
+        serializer = OrderSerializers(orders, many=True)
+        return JsonResponse(serializer.data, safe= False)
+
+    elif request.method == 'POST':
+        serializer = OrderSerializers(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
+        return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 

@@ -31,5 +31,11 @@ urlpatterns = [
     path('update/<int:id>', views.update, name='update'),
     path('delete/<int:id>', views.delete, name='delete'),
 
+    #API
+    path('customersapi/', views.customersapi, name='customersapi'),
+    path('orderapi/', views.orderapi, name='orderapi'),
+
+
+
 
 ]
