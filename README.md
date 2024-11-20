@@ -120,3 +120,22 @@ registerit in the settings file ... 'rest_framework',
 
 then create a new file under the app , create a new python file
 the create a url under the app
+
+
+
+
+
+
+
+NOV 20
+#MPESA API INTERGRATION
+create a new app on mpesa daraja, check the first two boxes then create the app
+
+Install daraje... pip install django_daraja
+state the credentials in the settings.py file
+
+then create the function in views
+then map it in the urls
+
+
+

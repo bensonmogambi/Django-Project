@@ -35,6 +35,11 @@ urlpatterns = [
     path('customersapi/', views.customersapi, name='customersapi'),
     path('orderapi/', views.orderapi, name='orderapi'),
 
+    # mpesa api
+    path('mpesaapi/', views.mpesaapi, name='mpesaapi'),
+
+
+
 
 
 
